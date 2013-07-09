@@ -21,9 +21,9 @@ http://docs.activestate.com/activepython/2.5/pywin32/win32file__DeviceIoControl_
     DeviceIoControl(Device, IoControlCode , InBuffer , OutBuffer , Overlapped )
 equivalent of using Unix's fcntl() to set a socket's O_NONBLOCK flag is setting the FIONBIO flag with Winsock's ioctlsocket().
 
-
 http://tangentsoft.net/wskfaq/articles/bsd-compatibility.html
 http://msdn.microsoft.com/en-us/library/aa363219%28VS.85%29.aspx
+http://msdn.microsoft.com/en-us/library/windows/desktop/bb736550(v=vs.85).aspx
 http://msdn.microsoft.com/en-us/library/aa363216(v=vs.85).aspx
 http://mail.python.org/pipermail/python-list/2003-January/228856.html
 
