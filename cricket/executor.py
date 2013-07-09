@@ -7,6 +7,29 @@ from cricket.events import EventSource
 from cricket.model import TestMethod
 from cricket.pipes import PipedTestResult, PipedTestRunner
 
+"""
+Windows possibilities:
+http://stackoverflow.com/questions/375427/non-blocking-read-on-a-subprocess-pipe-in-python/4896288#4896288
+http://effbot.org/pyfaq/how-do-i-get-a-single-keypress-at-a-time.htm
+http://stackoverflow.com/questions/14258529/how-i-process-this-python-file-on-windows
+http://stackoverflow.com/questions/1422368/fcntl-substitute-on-windows
+http://docs.python.org/2/library/fcntl.html
+
+http://docs.python.org/2/library/fcntl.html
+    fcntl.fcntl(fd, op[, arg])
+http://docs.activestate.com/activepython/2.5/pywin32/win32file__DeviceIoControl_meth.html
+    DeviceIoControl(Device, IoControlCode , InBuffer , OutBuffer , Overlapped )
+equivalent of using Unix's fcntl() to set a socket's O_NONBLOCK flag is setting the FIONBIO flag with Winsock's ioctlsocket().
+
+
+http://tangentsoft.net/wskfaq/articles/bsd-compatibility.html
+http://msdn.microsoft.com/en-us/library/aa363219%28VS.85%29.aspx
+http://msdn.microsoft.com/en-us/library/aa363216(v=vs.85).aspx
+http://mail.python.org/pipermail/python-list/2003-January/228856.html
+
+fcntl.fnctl() is used to obtain stdin's file descriptor flags and modify them for non-blocking mode.
+"""
+
 
 class Executor(EventSource):
     "A wrapper around the subprocess that executes tests."
